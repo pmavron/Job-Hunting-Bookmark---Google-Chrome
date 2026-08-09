@@ -7,9 +7,10 @@ You can also generate your own html file in: Excel > Appscript
 
 Template Code:
 
-  function exportToChromeBookmarks() {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    var data = sheet.getDataRange().getValues();
+```
+function exportToChromeBookmarks() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getDataRange().getValues();
   
   var html = '<!DOCTYPE NETSCAPE-Bookmark-file-1>\n' +
              '<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">\n' +
@@ -36,3 +37,4 @@ Template Code:
   DriveApp.createFile('companies.html', html, MimeType.HTML);
   Logger.log('Saved to Google Drive as companies.html');
 }
+```
